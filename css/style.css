@@ -1,0 +1,577 @@
+/*RESETEAR LOS ESTILOS*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  /* Evita cualquier intento de scroll horizontal anormal */
+  width: 100%;
+}
+
+.ana-header {
+  background-color: rgb(17, 4, 8);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.maestra-ana {
+  color: rgb(255, 60, 102);
+  font-family: "Ephesis", cursive;
+  font-weight: 500;
+  font-size: 40pt;
+  font-style: normal;
+}
+
+.header-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.agenda-ana {
+  font-size: 20px;
+  color: rgb(175, 164, 152);
+}
+
+.btn-whatsapp {
+  /* Comportamiento de botón para la etiqueta <a> */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  /* Estilos de forma y fondo */
+  background-color: rgb(255, 60, 102);
+  /* Verde claro vibrante */
+  border-radius: 40px;
+  /* Bordes completamente redondeados (estilo píldora) */
+  padding: 0px 34px;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  /* Espaciado interno superior/inferior y laterales */
+
+  /* Tipografía */
+  color: #3b1118;
+  /* Verde oscuro para el texto */
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 1000;
+  letter-spacing: -0.5px;
+
+  /* Transición suave para interactividad */
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #ffb9ca;
+}
+
+/* Efecto al hacer clic */
+.btn-whatsapp:active {
+  transform: scale(0.95);
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -5px;
+
+}
+
+.banner {
+
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+
+}
+
+.banner img {
+
+  width: 100%;
+  object-fit: cover;
+
+
+}
+
+
+
+  .banner-mobile {
+    display: none;
+  }
+
+
+.about-us {
+  background-color: rgb(243, 234, 224);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: right;
+  justify-content: space-between;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.about-image {
+  width: 100vw;
+  border-radius: 50%;
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0;
+  margin-left: 50px;
+}
+
+.about-container {
+  margin-left: 300px;
+}
+
+.about-title {
+  font-size: 50px;
+  font-family: inter;
+  font-weight: 400;
+}
+
+.about-specialty {
+  color: #a1004b;
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.about-text {
+  line-height: 1.4;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 350;
+}
+
+/* =========================================
+   SECCIÓN DE PREGUNTAS FRECUENTES (FAQ)
+   ========================================= */
+
+.faq-section {
+  /* NOTA: Añadí padding y fondo blanco para aislar la sección y darle respiro */
+  padding: 80px 40px;
+  background-color: #ffffff;
+  /* NOTA: Forcé una fuente sin serifa más limpia aquí para imitar el aspecto moderno de la imagen de referencia */
+}
+
+.faq-main-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 1200;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  color: #111;
+  font-family: inter;
+  font-weight: 520
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  /* Separación entre la columna izquierda y derecha */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Columna Izquierda --- */
+.faq-left {
+  flex: 1;
+  /* Ocupa 1 fracción del espacio */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.faq-intro {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #333;
+  margin-bottom: 40px;
+  max-width: 300px;
+  font-family: Roboto;
+  font-weight: 350;
+  
+  
+
+}
+
+.faq-contact-box p {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: #111;
+  font-family: Roboto;
+  font-weight: 350
+}
+
+/* --- Columna Derecha --- */
+.faq-right {
+  flex: 2;
+  /* Ocupa 2 fracciones del espacio (es más ancha) */
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eaeaea;
+  /* Línea separadora gris muy sutil */
+}
+
+/* Botón contenedor de la pregunta */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  gap: 15px;
+}
+
+.question-text {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f151e;
+  /* Color azul oscuro/grisáceo corporativo */
+  line-height: 1.4;
+}
+
+/* El círculo del botón más (+) */
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  border: 1px solid #cbd5e1;
+  /* Borde sutil */
+  border-radius: 50%;
+  color: #64748b;
+  font-size: 18px;
+  font-weight: 400;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Efecto hover simple para interacción */
+.faq-question:hover .icon-circle {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Contenedor oculto para la respuesta (por si luego usas JS) */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
+
+.faq-answer p {
+  padding: 0 0 20px 0;
+  /* Espaciado interno para el texto de la respuesta */
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Esta clase se la añadiremos dinámicamente con JavaScript al abrir la pregunta */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  /* Un valor lo suficientemente alto para que quepa el texto */
+}
+
+
+
+/*Nota: Parte de contactos con Nay clase 25/08 */
+
+.contact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0px;
+  background-color: rgb(17, 4, 8);
+}
+
+
+.contact-inf {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px;
+  background-color: rgb(25, 6, 12);
+  width: 100%;
+}
+
+
+.contact-btn {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contact-btn p {
+  padding-bottom: 20px;
+  line-height: 1.4;
+  font-size: 18px;
+  color: rgb(227, 232, 231);
+  padding-top: 30px;
+  font-family: Roboto;
+  font-weight: 350
+}
+
+.contact-inf h1 {
+  text-align: center;
+  font-size: 42px;
+  text-transform: uppercase;
+  color: rgb(255, 60, 102);
+  font-family: inter;
+  font-weight: 550
+}
+
+.contact-inf h2 {
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #dfe8eb;
+  font-family: Roboto;
+  font-weight: 350
+}
+
+.footer {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 230px;
+  background-color: rgb(17, 4, 8);
+  border-top: 1px solid rgba(245, 241, 242, 0.05);
+}
+
+.footer-ana {
+  flex-direction: column;
+  display: flex;
+}
+
+
+.footer-ana .texto1 {
+  font-size: 42px;
+  color: #dfe8eb;
+  font-family: Roboto;
+  font-weight: 450
+}
+
+.footer-ana .texto2 {
+  font-size: 24px;
+  color: rgb(255, 60, 102);
+  font-family: Roboto;
+  font-weight: 300
+}
+
+.footer-inf {
+  flex-direction: column;
+  display: flex;
+  color: #dfe8eb;
+  font-size: 24px;
+  text-decoration: none;
+  text-align: right;
+  font-family: Roboto;
+  font-weight: 300
+}
+
+/* =========================================
+   DISEÑO MÓVIL (Celulares y Tablets pequeñas)
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* --- HEADER --- */
+  .ana-header {
+    padding: 20px;
+    /* Agregamos un poco de espacio en lugar de 0 */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+
+
+  .maestra-ana {
+    color: rgb(255, 60, 102);
+    font-family: "Ephesis", cursive;
+    font-weight: 500;
+    font-size: 60px;
+    font-style: normal;
+  }
+
+  .header-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .banner-desktop {
+    display: none;
+  }
+
+  .banner-mobile {
+    display: block;
+  }
+
+
+
+  /* --- ACERCA DE NOSOTROS --- */
+
+
+  .about-us {
+    flex-direction: column;
+    /* Apilamos el texto y la imagen verticalmente */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 120px;
+    margin-bottom: -70px;
+    /* Reducimos el padding superior/inferior de 130px */
+    text-align: center;
+    /* Centramos el texto */
+  }
+
+  .about-container {
+    margin-left: 0;
+    padding-bottom: 30px;
+    /* ¡MUY IMPORTANTE! Quitamos los 300px que rompían la pantalla */
+  }
+
+  .about-text {
+    text-align: justify;
+    font-size: 24px;
+
+  }
+
+  .about-title {
+    font-size: 54px;
+
+  }
+
+  .about-specialty {
+    font-size: 38px;
+  }
+
+  .about-img-container {
+    justify-content: center;
+    display: flex;
+  }
+
+  .about-image {
+    margin-left: 0;
+    /* Quitamos los 50px de margen */
+    max-width: 80%;
+    /* Hacemos que la imagen se adapte al celular */
+    margin-top: 40px;
+    /* Separación entre el texto y la imagen */
+    padding-bottom: 60px;
+  }
+
+  /* --- PREGUNTAS FRECUENTES --- */
+  .faq-container {
+    flex-direction: column;
+    /* Apilamos las columnas */
+    gap: 40px;
+  }
+
+  .faq-left {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  /* --- FOOTER --- */
+  .footer {
+    flex-direction: column;
+    /* Apilamos los elementos del footer */
+    padding: 40px 20px;
+    /* ¡MUY IMPORTANTE! Quitamos el padding lateral de 230px */
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-inf {
+    text-align: center;
+  }
+
+
+  .faq-main-title {
+    font-size: 40px;
+
+  }
+
+  .faq-intro {
+    font-size: 25px;
+
+  }
+
+  .faq-contact-box p {
+    font-size: 25px;
+
+
+  }
+
+  .faq-item p {
+    font-size: 20px;
+    line-height: 1.6;
+
+  }
+
+  .contact-btn p {
+    font-size: 20px;
+
+
+  }
+
+  .btn-whatsapp {
+    font-size: 24px;
+    padding: 0px 46px;
+    padding-top: 16px;
+    padding-bottom: 18px;
+  }
+
+  .header-buttons p {
+    font-size: 25px;
+
+  }
+
+
+
+}
